@@ -23,9 +23,9 @@ public class Livro {
     public Livro() {
      }
 
-    private Livro(String titulo, String linguagem) {
+    private Livro(String titulo, String idioma) {
         this.titulo = titulo;
-        this.idioma = linguagem;
+        this.idioma = idioma;
     }
 
     public Long getId() {

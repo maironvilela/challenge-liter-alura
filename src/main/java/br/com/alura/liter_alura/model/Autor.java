@@ -73,10 +73,12 @@ public class Autor {
 
     @Override
     public String toString() {
-        return  "id="+id+'\''+
-                 ", nome='" + nome + '\'' +
-                ", anoNascimento=" + anoNascimento +
-                ", anoFalecimento=" + anoFalecimento;
+        return """
+                Nome: %s
+                Ano de Nascimento: %d
+                Ano Falecimento: %d
+                """.formatted(getNome(), getAnoNascimento(), getAnoFalecimento());
+
 
     }
 
@@ -85,7 +87,5 @@ public class Autor {
 
         return new Autor(autor.nome(), autor.anaNascimento(), autor.anoFalecimento());
     }
-
-
 
 }

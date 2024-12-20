@@ -17,6 +17,7 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
@@ -24,32 +25,25 @@ import java.util.Scanner;
 public class LivroService {
 
 
-
-
-
-     private LivroRepositorio livroRepositorio;
-     private AutorRepositorio autorRepositorio;
-
-      public LivroService(LivroRepositorio livroRepositorio, AutorRepositorio autorRepositorio){
-         this.livroRepositorio = livroRepositorio;
-         this.autorRepositorio = autorRepositorio;
-      }
-
-
-
     private ConverteDados converteDados = new ConverteDados();
     private Scanner leitura = new Scanner(System.in);
 
+    private LivroRepositorio livroRepositorio;
+    private AutorRepositorio autorRepositorio;
 
-    public Optional<Livro> pesquisarLivro(String titulo, Autor autor){
+    public LivroService(LivroRepositorio livroRepositorio, AutorRepositorio autorRepositorio){
+        this.livroRepositorio = livroRepositorio;
+        this.autorRepositorio = autorRepositorio;
+      }
+
+    public Optional<Livro> pesquisarLivroPorTitulo(String titulo){
         return this.livroRepositorio.findByTitulo(titulo);
     }
-
 
     public Livro savarLivro(DataApiResponse data){
 
 
-        var optionalLivroSalvo = this.livroRepositorio.findByTitulo(data.livros()[0].titulo());
+        var optionalLivroSalvo = this.pesquisarLivroPorTitulo(data.livros()[0].titulo());
 
         if(optionalLivroSalvo.isPresent()){
             throw new LivroJaExisteException("Livro '"+data.livros()[0].titulo()+"' ja existe", 400);
@@ -67,4 +61,7 @@ public class LivroService {
       return this.livroRepositorio.save(livro);
 
      }
+
+
+
 }
