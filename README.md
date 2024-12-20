@@ -1,15 +1,17 @@
 
-<img loading="lazy" src="https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb" height="400" width="100%"/>
+<img loading="lazy" src="https://cdn.pixabay.com/photo/2024/02/08/10/27/child-8560775_640.jpg" height="400" width="100%"/>
 <h1 align="center">
      Projeto Liter Alura
 </h1>
 
   <p align="center">
     <a href="#sobre-o-projeto">Sobre o Projeto</a> |
-    <a href="#principais-tecnologias">Principais Tecnologias</a> |
+    <a href="#objetivo-do-projeto">Objetivo do Projeto</a> |
     <a href="#principais-recursos">Principais Recursos</a> |
-    <a href="#estrutura_do_projeto">Estrutura do Projeto</a> |
-    <a href="#executando_o_projeto">Executando o projeto</a>   
+    <a href="#principais-tecnologias">Principais Tecnologias</a> |
+    <a href="#estrutura-do-projeto">Principais Tecnologias</a> |
+    <a href="#requisitos-para-rodar-o-projeto">Requisitos para rodar o projeto</a> |
+ 
 </p>
 
 
@@ -20,7 +22,7 @@ Neste emocionante desafio de programação, foi construir um catálogo de livros
 Apprendemos a realizar solicitações a uma API de livros, manipular dados JSON, armazená-los em um banco de dados e, por fim, a filtrar e mostrar os livros e autores de interesse.
 
 
-# 🎯 Objetivo do Projeto
+# 🎯Objetivo do Projeto
 
 Desenvolver um Catálogo de Livros que ofereça interação textual (via console) com os usuários, 
 proporcionando no mínimo 5 opções de interação. 
@@ -38,8 +40,6 @@ Os livros serão buscados através de uma API específica.
 [![](https://img.shields.io/badge/Inserção_e_consulta_no_banco_de_dados-052051)]()
 [![](https://img.shields.io/badge/Exibição_de_resultados_aos_usuários-052051)]()
 
-
-
  
 
 # 💻Principais Tecnologias
@@ -54,8 +54,6 @@ Os livros serão buscados através de uma API específica.
 [![https://gutendex.com/](https://img.shields.io/badge/@DB-postgresql-083658)]()
 
 [![https://docs.docker.com/compose/](https://img.shields.io/badge/@Infra-Docker_Compose-FE9A2E)]()
-
-
 
 
 
@@ -89,7 +87,3 @@ git clone https://github.com/maironvilela/challenge-liter-alura.git
 SHIFT + F10
 ```
 
-
-
-
- aqui](https://github.com/user-attachments/assets/37aae334-80e2-4a90-b92b-eeab7b16ed9f)
